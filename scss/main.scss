@@ -1,0 +1,13 @@
+body {
+    font-family: myfont;
+    color: var(--off-black);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(/cursed-timer-ulil.ttf);
+}
