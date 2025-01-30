@@ -71,6 +71,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 80px;
+  max-width: 600px;
 }
 .main-holder .board-holder .board {
   display: flex;
@@ -137,4 +138,50 @@ object {
   opacity: 10%;
   width: 70vw;
   z-index: -1;
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .btn--reset {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+  .board-holder {
+    width: 90%;
+    min-height: 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .btn--reset {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .board-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .board-holder {
+    width: 95%;
+    min-height: 200px;
+    padding: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */
