@@ -1,13 +1,114 @@
-body {
-    font-family: myfont;
-    color: var(--off-black);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+:root {
+    --white: #Fff;
+    --black: #000;
+    --bg-blue: #1B244A;
+    --point-bg: #090909;
+    --point-red: #F94F6D;
+    --text-grey: #EEEEEE;
 }
 
 @font-face {
     font-family: myfont;
     src: url(/cursed-timer-ulil.ttf);
+}
+
+.btn {
+    font-family: myfont;
+    padding: 12px 24px;
+    font-size: medium;
+    border-radius: 8px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    backdrop-filter: blur(24px);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        color: var(--white);
+    }
+
+    &:active {
+        cursor: pointer;
+        background: var(--white);
+        color: var(--black);
+    }
+}
+
+body {
+    font-family: myfont;
+    background-color: var(--bg-blue);
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 64px 80px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    justify-self: center;
+    padding: 40px;
+
+    .board {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        padding: 24px;
+        border: .5px solid var(--white);
+        border-width: thin;
+        backdrop-filter: blur(16px);
+        // background-color: var(--point-bg);
+        border-radius: 8px;
+
+
+        &__title {
+            p {
+
+                color: var(--text-grey);
+                font-size: 40px;
+                line-height: 48px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+            }
+        }
+
+        &__points {
+            width: 160px;
+            text-align: center;
+            background-color: var(--point-bg);
+            border-radius: 8px;
+            padding: 12px 48px;
+            color: var(--point-red);
+            font-size: 96px;
+            line-height: 0px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        &__add-points {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+        }
+    }
+}
+
+object {
+    position: absolute;
+    opacity: 10%;
+    width: 80vw;
+    z-index: -1;
 }

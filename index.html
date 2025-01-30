@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/main.css">
     <title>Backetball Scoreboard - J. Asaolu</title>
 </head>
+
 <body>
-    
+    <div class="main-holder">
+        <div class="board">
+            <div class="board__title">
+                <p>HOME</p>
+            </div>
+            <div class="board__points" id="point-board">
+                <p>0</p>
+            </div>
+            <div class="board__add-points">
+                <button class="btn" onclick="addPoints1()">+1</button>
+                <button class="btn" onclick="addPoints2()">+2</button>
+                <button class="btn" onclick="addPoints3()">+3</button>
+            </div>
+        </div>
+        
+    </div>
+    <object data="/media/basketball-court.svg" type=""></object>
 </body>
+
 </html>
