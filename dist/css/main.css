@@ -2,6 +2,7 @@
   --white: #Fff;
   --black: #000;
   --grey: #747474;
+  --btn-shade: #9AABD8;
   --bg-blue: #1B244A;
   --point-bg: #090909;
   --point-red: #F94F6D;
@@ -17,8 +18,8 @@
   padding: 12px 24px;
   font-size: medium;
   border-radius: 8px;
-  border: 2px solid var(--white);
-  color: var(--white);
+  border: 2px solid var(--btn-shade);
+  color: var(--btn-shade);
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -31,7 +32,7 @@
 .btn:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  color: var(--btn-shade);
 }
 .btn:active {
   cursor: pointer;
@@ -117,12 +118,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-weight: 300;
 }
 .main-holder .board-holder .board__remove-points p {
   font-family: Verdana;
   margin: 0;
-  font-size: 20px;
-  color: var(--white);
+  font-size: 16px;
+  color: var(--text-grey);
 }
 .main-holder .board-holder .board__remove-points .btn-holder {
   display: flex;
