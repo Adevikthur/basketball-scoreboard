@@ -1,12 +1,44 @@
+//Home and Guest points
 
-let pointBoard = document.getElementById("point-board");
+let homePoints = 0;
+let guestPoints = 0;
 
-let point = 0;
+//Scoreboard elements
 
-pointBoard.textContent = point;
+let homePointBoard = document.querySelector("#home-point-board p");
+let guestPointBoard = document.querySelector("#guest-point-board p");
 
-function addPoints1() {
-    pointBoard.textContent += 1;
+// Scoreboards Initialization
+
+homePointBoard.textContent = homePoints;
+guestPointBoard.textContent = guestPoints;
+
+// Add points to HOME
+function addHomePoints(points) {
+  homePoints += points;
+  homePointBoard.textContent = homePoints;
 }
 
-addPoints();
+// Remove points from HOME
+function removeHomePoints(points) {
+  homePoints -= points;
+  homePointBoard.textContent = homePoints;
+}
+// Add points to GUEST
+function addGuestPoints(points) {
+  guestPoints += points;
+  guestPointBoard.textContent = guestPoints;
+}
+
+// Remove points from GUEST
+function removeGuestPoints(points) {
+  guestPoints -= points;
+  guestPointBoard.textContent = guestPoints;
+}
+
+function resetPoints(points) {
+  guestPoints = points;
+  guestPointBoard.textContent = guestPoints;
+  homePoints = points;
+  homePointBoard.textContent = homePoints;
+}

@@ -10,33 +10,53 @@
 
 <body>
     <div class="main-holder">
-        <div class="board">
-            <div class="board__title">
-                <p>HOME</p>
+        <div class="board-holder">
+            <div class="board">
+                <div class="board__title">
+                    <p>HOME</p>
+                </div>
+                <div class="board__points" id="home-point-board">
+                    <p>0</p>
+                </div>
+                <div class="board__add-points">
+                    <button class="btn" onclick="addHomePoints(1)">+1</button>
+                    <button class="btn" onclick="addHomePoints(2)">+2</button>
+                    <button class="btn" onclick="addHomePoints(3)">+3</button>
+                </div>
+                <div class="board__remove-points">
+                    <p>Point correction</p>
+                    <div class="btn-holder">
+                        <button class="btn" onclick="removeHomePoints(1)">-1</button>
+                        <button class="btn" onclick="removeHomePoints(2)">-2</button>
+                        <button class="btn" onclick="removeHomePoints(3)">-3</button>
+                    </div>
+                </div>
             </div>
-            <div class="board__points" id="point-board">
-                <p>0</p>
-            </div>
-            <div class="board__add-points">
-                <button class="btn" onclick="addPoints1()">+1</button>
-                <button class="btn" onclick="addPoints2()">+2</button>
-                <button class="btn" onclick="addPoints3()">+3</button>
-            </div>
-        </div>
 
-        <div class="board">
-            <div class="board__title">
-                <p>GUEST</p>
-            </div>
-            <div class="board__points" id="point-board">
-                <p>0</p>
-            </div>
-            <div class="board__add-points">
-                <button class="btn" onclick="addPoints1()">+1</button>
-                <button class="btn" onclick="addPoints2()">+2</button>
-                <button class="btn" onclick="addPoints3()">+3</button>
+            <div class="board">
+                <div class="board__title">
+                    <p>GUEST</p>
+                </div>
+                <div class="board__points" id="guest-point-board">
+                    <p>0</p>
+                </div>
+                <div class="board__add-points">
+                    <button class="btn" onclick="addGuestPoints(1)">+1</button>
+                    <button class="btn" onclick="addGuestPoints(2)">+2</button>
+                    <button class="btn" onclick="addGuestPoints(3)">+3</button>
+                </div>
+                <div class="board__remove-points">
+                    <p>Point correction</p>
+                    <div class="btn-holder">
+                        <button class="btn" onclick="removeGuestPoints(1)">-1</button>
+                        <button class="btn" onclick="removeGuestPoints(2)">-2</button>
+                        <button class="btn" onclick="removeGuestPoints(3)">-3</button>
+
+                    </div>
+                </div>
             </div>
         </div>
+        <button class="btn btn--reset" onclick="resetPoints(0)">RESET</button>
 
     </div>
     <object data="/media/basketball-court.svg" type=""></object>

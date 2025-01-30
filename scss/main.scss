@@ -39,6 +39,13 @@
         background: var(--white);
         color: var(--black);
     }
+
+    &--reset {
+        width: fit-content;
+        font-size: 24px;
+        padding: 16px 32px;
+    }
+
 }
 
 body {
@@ -49,23 +56,31 @@ body {
     scroll-behavior: smooth;
     padding: 64px 80px;
     display: flex;
-    justify-items: center;
+    flex-direction: column;
     align-content: center;
-    justify-content: center;
+    align-items: center;
 
-    // background-image: url(/media/basketball-court.svg);
-    // background-size: cover;
-    .main-holder {
+
+
+}
+
+.main-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    align-content: center;
+    align-items: center;
+
+    .board-holder {
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
         gap: 80px;
-        padding: 40px;
 
         .board {
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 48px;
             align-items: center;
             padding: 24px;
             border: .5px solid var(--grey);
@@ -87,16 +102,22 @@ body {
             }
 
             &__points {
+                position: relative;
                 width: 160px;
-                text-align: center;
+                height: max-content;
                 background-color: var(--point-bg);
                 border-radius: 8px;
                 padding: 12px 48px;
                 color: var(--point-red);
-                font-size: 96px;
-                line-height: 0px;
                 font-weight: bold;
-                margin: 0;
+
+
+                p {
+                    font-size: 96px;
+                    margin: 0;
+                    text-align: center;
+                    transform: translateY(5%);
+                }
             }
 
             &__add-points {
@@ -104,13 +125,34 @@ body {
                 flex-direction: row;
                 gap: 16px;
             }
+
+            &__remove-points {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                p {
+                    font-family: Verdana;
+                    margin: 0;
+                    font-size: 20px;
+                    color: var(--white);
+                }
+
+                .btn-holder {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 16px;
+
+                }
+            }
         }
     }
 
-    object {
-        position: absolute;
-        opacity: 10%;
-        width: 70vw;
-        z-index: -1;
-    }
+}
+
+object {
+    position: absolute;
+    opacity: 10%;
+    width: 70vw;
+    z-index: -1;
 }

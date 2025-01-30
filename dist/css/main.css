@@ -38,6 +38,12 @@
   background: var(--white);
   color: var(--black);
 }
+.btn--reset {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 24px;
+  padding: 16px 32px;
+}
 
 body {
   font-family: myfont;
@@ -47,20 +53,28 @@ body {
   scroll-behavior: smooth;
   padding: 64px 80px;
   display: flex;
-  justify-items: center;
+  flex-direction: column;
   align-content: center;
-  justify-content: center;
+  align-items: center;
 }
-body .main-holder {
+
+.main-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  align-content: center;
+  align-items: center;
+}
+.main-holder .board-holder {
   display: flex;
   flex-direction: row;
   gap: 80px;
-  padding: 40px;
 }
-body .main-holder .board {
+.main-holder .board-holder .board {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 48px;
   align-items: center;
   padding: 24px;
   border: 0.5px solid var(--grey);
@@ -69,7 +83,7 @@ body .main-holder .board {
           backdrop-filter: blur(12px);
   border-radius: 8px;
 }
-body .main-holder .board__title p {
+.main-holder .board-holder .board__title p {
   color: var(--text-grey);
   font-size: 40px;
   line-height: 48px;
@@ -77,24 +91,46 @@ body .main-holder .board__title p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
 }
-body .main-holder .board__points {
+.main-holder .board-holder .board__points {
+  position: relative;
   width: 160px;
-  text-align: center;
+  height: -moz-max-content;
+  height: max-content;
   background-color: var(--point-bg);
   border-radius: 8px;
   padding: 12px 48px;
   color: var(--point-red);
-  font-size: 96px;
-  line-height: 0px;
   font-weight: bold;
-  margin: 0;
 }
-body .main-holder .board__add-points {
+.main-holder .board-holder .board__points p {
+  font-size: 96px;
+  margin: 0;
+  text-align: center;
+  transform: translateY(5%);
+}
+.main-holder .board-holder .board__add-points {
   display: flex;
   flex-direction: row;
   gap: 16px;
 }
-body object {
+.main-holder .board-holder .board__remove-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.main-holder .board-holder .board__remove-points p {
+  font-family: Verdana;
+  margin: 0;
+  font-size: 20px;
+  color: var(--white);
+}
+.main-holder .board-holder .board__remove-points .btn-holder {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+object {
   position: absolute;
   opacity: 10%;
   width: 70vw;
